@@ -269,8 +269,8 @@ function SessionItem({
                         <span className="text-xs text-text-muted">• {turn.response_time_ms < 1000 ? `${turn.response_time_ms}ms` : `${(turn.response_time_ms / 1000).toFixed(1)}s`}</span>
                       )}
                     </div>
-                    <div className="text-sm text-text-secondary leading-relaxed bg-white/5 border border-white/5 rounded-lg p-3">
-                      <ReactMarkdown className="prose prose-invert prose-sm max-w-none prose-p:mb-2 prose-p:last:mb-0 prose-strong:text-white prose-code:text-indigo-300 prose-code:bg-indigo-500/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded">
+                    <div className="text-sm text-text-secondary leading-relaxed bg-white/5 border border-white/5 rounded-lg p-3 prose-invert prose-sm max-w-none prose-p:mb-2 prose-p:last:mb-0 prose-strong:text-white prose-code:text-indigo-300 prose-code:bg-indigo-500/10 prose-code:px-1 prose-code:py-0.5 prose-code:rounded">
+                      <ReactMarkdown>
                         {turn.bot_response}
                       </ReactMarkdown>
                     </div>
