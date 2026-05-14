@@ -153,11 +153,11 @@ function ActivityChart({ data }: { data: { date: string; interacciones: number }
               <RechartsTooltip
                 content={({ active, payload }) => {
                   if (active && payload && payload[0]) {
-                    const data = payload[0].payload as typeof data[0];
+                    const entry = payload[0].payload as { date: string; interacciones: number };
                     return (
                       <div className="glass-card p-3 min-w-[140px]">
-                        <div className="text-xs text-text-muted mb-1">{formatDate(data.date)}</div>
-                        <div className="text-lg font-bold font-outfit">{data.interacciones} interacciones</div>
+                        <div className="text-xs text-text-muted mb-1">{formatDate(entry.date)}</div>
+                        <div className="text-lg font-bold font-outfit">{entry.interacciones} interacciones</div>
                       </div>
                     );
                   }
